@@ -21,7 +21,7 @@ class App extends BaseConfig
 	| environments.
 	|
 	*/
-	public $baseURL = 'https://andremertes.de/leistungwise2021/public/';
+	public $baseURL = 'https://andremertes.de/'; //leistungwise2021/public/';
 
 	/*
 	|--------------------------------------------------------------------------
