@@ -3,20 +3,19 @@ Web-App zur gleichmäßigen und zufälligen Verteilung von Klausuren an Korrekte
 CI\App\Config\Database.php fehlt
 
 Die Erstellung einer DB mit folgenden TB nötig:
-
-mitglieder
-  id
-  username
-  password
+-mitglieder{
+  id,
+  username,
+  password,
   name
-
-klausuren
-  id
-  name
-  datei
+ }
+-klausuren{
+  id,
+  name,
+  datei,
   downloads
-
-mitgliederklausuren
-  mitgliedID (Fremdschlüssel mitglieder.id)
+ }
+-mitgliederklausuren{
+  mitgliedID (Fremdschlüssel mitglieder.id),
   klausurID (Fremdschlüssel klausuren.id)
-  
+ }
