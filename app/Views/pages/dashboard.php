@@ -61,101 +61,56 @@
                 <div class="col-md-6 col-xl-4"></div>
             </div>
 
-            <div class="row">
+            <form class="row" action="<?= base_url('dashboard/anfordern') ?>" method="post">
+
+                <?php //var_dump($klausuren); echo $userid;
+
+                foreach ($klausuren as $item){
+                    if ($item['mitgliedID'] == $userid){
+
+                        echo '
+                            <div class="col-md-6 col-lg-3">
+                                <div class="card-shadow-danger mb-3 widget-chart widget-chart2 text-left card" style="height: 180px;">
+                                    <div class="widget-content">
+                                        <div class="widget-content-outer">
+                                            <div class="widget-content-wrapper pt-5">
+                                                <div class="widget-content-left pr-2 fsize-1">
+                                                    <a type="button" class="btn-shadow p-1 btn btn-danger btn-sm" href="/downloads/'.$item['datei'].'" target="_blank">Download</a>
+                                                </div>
+                                                <div class="widget-content-right w-100">
+                                                    <div class="widget-numbers mt-0 fsize-3 text-danger text-center">'.$item['name'].'</div>
+                                                </div>
+                                            </div>
+                                            <div class="widget-content-left fsize-1">
+                                                <div class="text-muted opacity-6">'.$item['id'].'</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>';
+
+                    } else {}
+                }
+
+                ?>
 
                 <div class="col-md-6 col-lg-3">
-                    <div class="card-shadow-danger mb-3 widget-chart widget-chart2 text-left card" style="height: 180px;">
-                        <div class="widget-content">
-                            <div class="widget-content-outer">
-                                <div class="widget-content-wrapper pt-5">
-                                    <div class="widget-content-left pr-2 fsize-1">
-                                        <button type="button" class="btn-shadow p-1 btn btn-danger btn-sm">Download</button>
-                                    </div>
-                                    <div class="widget-content-right w-100">
-                                        <div class="widget-numbers mt-0 fsize-3 text-danger text-center">Name</div>
-                                    </div>
-                                </div>
-                                <div class="widget-content-left fsize-1">
-                                    <div class="text-muted opacity-6">Klausur 1</div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-md-6 col-lg-3">
-                    <div class="card-shadow-success mb-3 widget-chart widget-chart2 text-left card" style="height: 180px;">
-                        <div class="widget-content">
-                            <div class="widget-content-outer">
-                                <div class="widget-content-wrapper pt-5">
-                                    <div class="widget-content-left pr-2 fsize-1">
-                                        <button type="button" class="btn-shadow p-1 btn btn-success btn-sm">Download</button>
-                                    </div>
-                                    <div class="widget-content-right w-100">
-                                        <div class="widget-numbers mt-0 fsize-3 text-success text-center">Name</div>
-                                    </div>
-                                </div>
-                                <div class="widget-content-left fsize-1">
-                                    <div class="text-muted opacity-6">Klausur 2</div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-md-6 col-lg-3">
-                    <div class="card-shadow-warning mb-3 widget-chart widget-chart2 text-left card" style="height: 180px;">
-                        <div class="widget-content">
-                            <div class="widget-content-outer">
-                                <div class="widget-content-wrapper pt-5">
-                                    <div class="widget-content-left pr-2 fsize-1">
-                                        <button type="button" class="btn-shadow p-1 btn btn-warning btn-sm text-white">Download</button>
-                                    </div>
-                                    <div class="widget-content-right w-100">
-                                        <div class="widget-numbers mt-0 fsize-3 text-warning text-center">Name</div>
-                                    </div>
-                                </div>
-                                <div class="widget-content-left fsize-1">
-                                    <div class="text-muted opacity-6">Klausur 3</div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-md-6 col-lg-3">
-                    <div class="card-shadow-info mb-3 widget-chart widget-chart2 text-left card" style="height: 180px;">
-                        <div class="widget-content">
-                            <div class="widget-content-outer">
-                                <div class="widget-content-wrapper pt-5">
-                                    <div class="widget-content-left pr-2 fsize-1">
-                                        <button type="button" class="btn-shadow p-1 btn btn-info btn-sm">Download</button>
-                                    </div>
-                                    <div class="widget-content-right w-100">
-                                        <div class="widget-numbers mt-0 fsize-3 text-info text-center">Name</div>
-                                    </div>
-                                </div>
-                                <div class="widget-content-left fsize-1">
-                                    <div class="text-muted opacity-6">Klausur 4</div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-md-6 col-lg-3">
-                    <div class="card-shadow-secondary mb-3 widget-chart widget-chart2 text-left card" style="height: 180px;">
+                    <button class="card-shadow-secondary mb-3 widget-chart widget-chart2 text-left card" style="height: 180px;" name="btnanfordern" type="submit">
+                    <!-- <div class="card-shadow-secondary mb-3 widget-chart widget-chart2 text-left card" style="height: 180px;"> -->
                         <div class="widget-content">
                             <div class="widget-content-outer">
                                 <div class="widget-content-wrapper pt-5">
                                     <div class="widget-content-right w-100">
                                         <div class="widget-numbers mt-0 fsize-3 text-secondary text-center btn">Neue Klausur anfordern</div>
+                                        <!-- <input type="hidden" id="klausID" name="klausID" value="<?//= isset($neuekorr['id']) ? $neuekorr['id'] : ''; ?>"> -->
                                     </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
+                    <!-- </div> -->
+                    </button>
                 </div>
+            </form>
 
             </div>
         </div>

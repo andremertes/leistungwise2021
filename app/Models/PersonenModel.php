@@ -7,18 +7,8 @@ class PersonenModel extends Model
     public function login()
     {
         $this->personen = $this->db->table('mitglieder');
-        $this->personen->select('mitglieder.password');
+        $this->personen->select('*');
         $this->personen->where('mitglieder.username', $_POST['username']);
-        $result = $this->personen->get();
-
-        return $result->getRowArray();
-    }
-
-    public function getpers()
-    {
-        $this->personen = $this->db->table('mitglieder');
-        $this->personen->select('mitglieder.name');
-        $this->personen->where('mitglieder.username', $_SESSION['username']);
         $result = $this->personen->get();
 
         return $result->getRowArray();
@@ -29,7 +19,7 @@ class PersonenModel extends Model
         $this->personen = $this->db->table('mitglieder');
         $this->personen->select('*');
         if ($person_id != NULL){
-            $this->personen->where('mitglieder.name', $person_id);
+            $this->personen->where('mitglieder.id', $person_id);
         }
         $this->personen->orderBy('username');
         $result = $this->personen->get();

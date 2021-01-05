@@ -1,6 +1,6 @@
 <?php
 
-$passwort = 'san4m1s';
+$passwort = 'dlo1m1r';
 $passwort_hashed = '';
 $passwort_verified = 'Nein';
 

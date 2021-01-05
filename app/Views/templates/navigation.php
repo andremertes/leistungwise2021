@@ -35,7 +35,7 @@
                 <ul class="vertical-nav-menu">
                     <li class="app-sidebar__heading">Dashboard</li>
                     <li>
-                        <a href="#" class="mm-active">                                                                                              <!-- href einrichten mit baseurl (PHP) -->
+                        <a href="<?php echo base_url().'/dashboard/dash_dyn' ?>" class="mm-active">                                                                                              <!-- href einrichten mit baseurl (PHP) -->
                             <i class="fas fa-home"></i>
                             Home
                         </a>
@@ -44,13 +44,13 @@
                     <li>
                         <ul>
                             <li>
-                                <a href="#">                                                                                                      <!-- href einrichten mit baseurl (PHP) -->
+                                <a href="/downloads/erwartungshorizont.pdf" target="_blank">                                                                                                      <!-- href einrichten mit baseurl (PHP) -->
                                     <i class="metismenu-icon"></i>
                                     Erwartungshorizont
                                 </a>
                             </li>
                             <li>
-                                <a href="#">                                                                                                      <!-- href einrichten mit baseurl (PHP) -->
+                                <a href="/downloads/bewertungsbogen.pdf" target="_blank">                                                                                                      <!-- href einrichten mit baseurl (PHP) -->
                                     <i class="metismenu-icon">
                                     </i>Bewertungsbogen
                                 </a>

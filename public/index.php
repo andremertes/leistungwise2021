@@ -35,6 +35,8 @@ $paths = new Config\Paths();
 // Location of the framework bootstrap file.
 $app = require rtrim($paths->systemDirectory, '/ ') . '/bootstrap.php';
 
+// $useKint = true;
+
 /*
  *---------------------------------------------------------------
  * LAUNCH THE APPLICATION
@@ -43,5 +45,3 @@ $app = require rtrim($paths->systemDirectory, '/ ') . '/bootstrap.php';
  * up the engines and make this app do its thang.
  */
 $app->run();
-
-// $useKint = true;

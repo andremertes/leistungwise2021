@@ -42,21 +42,18 @@
                     <div class="widget-content p-0">
                         <div class="widget-content-wrapper">
                             <div class="widget-content-left  ml-3 header-user-info">
+                                Hallo, <?= $name; ?>! &nbsp;&nbsp;
 
 
-
-
-
-                                Hallo, <?= $name['name']; ?>!
-
-                                <?php //var_dump($name); ?>
-
+                                    <a href="https://youtu.be/lfcGEQRyaqI" target="_blank">                                                 <!-- https://youtu.be/TQ9UuJ8vTpk -->
+                                        Impressum
+                                    </a>
 
 
                             </div>
                             <div class="widget-content-right header-user-info ml-3">
                                 <a href="<?php echo base_url().'/login/logout' ?>">
-                                    <button type="submit" class="btn-shadow p-1 btn btn-danger btn-sm show-toastr-example">                <!-- PHP Session Destroy -->
+                                    <button type="submit" class="btn-shadow p-1 btn btn-danger btn-sm show-toastr-example">                <!-- PHP Session destroy -->
                                     Logout&nbsp;<i class="fa text-white fas fa-sign-out-alt pr-1 pl-1"></i>
                                 </button>
                                 </a>
